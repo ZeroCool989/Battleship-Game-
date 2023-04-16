@@ -1,3 +1,12 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+import random
+
+#Build 8x8 game board
+board = []
+for x in range (8):
+    board.append(["O" * 8])
+
+#Display board
+def print_board(board):
+    for row in board:
+        print(" ".join(row))
+print_board(board)
