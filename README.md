@@ -65,3 +65,7 @@ The project was then deployed to Heroku using the following steps:
     * https://www.youtube.com/watch?v=alJH_c9t4zw
     * https://www.youtube.com/watch?v=u3yo-TjeIDg
     * https://www.youtube.com/watch?v=n0ngeLBJBNU
+
+# Acknowledgements
+* Slack Community
+* My mentor for support, advice and feedback.
