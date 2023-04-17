@@ -24,3 +24,11 @@ The game is implemented in Python and contains the following components:
 4.A loop that allows the player to make 5 guesses.
 5.Conditional statements for handling different guess outcomes.
 6.A prompt for playing again or quitting.
+
+# Technologies Used:
+### Programming Languages:
+* Python
+### Git
+* Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+### Github
+* GitHub is used to store the projects code after being pushed from Git.
