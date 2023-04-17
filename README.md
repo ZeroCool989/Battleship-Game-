@@ -56,3 +56,12 @@ The project was then deployed to Heroku using the following steps:
 2. Link the project from GitHub to Heroku.
 4. Add the Python and NodeJS buildpacks.
 5. Manually deploy the project (I used the manual deploy option in order to control what version was deployed to the live environment).
+
+# Credits
+* The code for the structure of the game board was adapted from the below example (right click to open in new tab).
+   https://coderspacket.com/battleship-game-in-python
+* Youtube was great resource for answering questions I had. Where several tutorials where helpful. 
+https://www.youtube.com/watch?v=7Ki_2gr0rsE
+https://www.youtube.com/watch?v=alJH_c9t4zw
+https://www.youtube.com/watch?v=u3yo-TjeIDg
+https://www.youtube.com/watch?v=n0ngeLBJBNU
