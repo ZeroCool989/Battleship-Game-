@@ -17,4 +17,6 @@ def place_ship(board):
     board[ship_row][ship_col]=" * "
     return(ship_row, ship_col)
 
+#Get the players name
+player_name=input("What is your name player? ")
 
