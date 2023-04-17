@@ -14,3 +14,13 @@ The app can be found <a href="https://pp3-battleship-game.herokuapp.com/" target
 4.If your guess matches the location of the battleship, you win the game.
 5.If you use up all 5 turns without guessing the correct location, you lose the game.
 6.You will be prompted to play again or quit.
+
+# Code Structure 
+The game is implemented in Python and contains the following components:
+
+1.A game board represented by a 2D array.
+2.A function for randomly placing the battleship on the board.
+3.A function for printing the game board.
+4.A loop that allows the player to make 5 guesses.
+5.Conditional statements for handling different guess outcomes.
+6.A prompt for playing again or quitting.
