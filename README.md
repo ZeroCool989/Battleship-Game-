@@ -32,3 +32,10 @@ The game is implemented in Python and contains the following components:
 * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 ### Github
 * GitHub is used to store the projects code after being pushed from Git.
+
+# Testing
+## Functionality testing
+* Each piece of code was tested in Gitpod.
+* I also tested the app once the final product was deployed.
+## Code Validation
+* The code was checked using CI Python Linter online checker.
