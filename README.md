@@ -4,6 +4,15 @@
 
 The objective of the third project was to construct an interactive, logical game that facilitates user engagement in a competitive setting with a computer-based opponent.
 
+# Table of Contents
+1. Link to app
+3. How to play
+4. Code Structure
+5. Technologies Used
+6. Testing
+7. Deployment
+8. Credits
+9. Acknowledgements
 # Link to app
 The app can be found <a href="https://pp3-battleship-game.herokuapp.com/" target="_blank" rel="noopener">here</a>. (Note: Right click on link to open a new tab).
 
