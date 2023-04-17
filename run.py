@@ -60,4 +60,8 @@ while play_again == "Y":
             print("\nGame Over")
             print(f"Sorry {player_name}, you lost!.")
             print(f"Battleship was at row {ship_row} and column {ship_col}.")
-''
+
+    # Ask the player for another or ending the game
+    play_again = input("Do you want to play again? (Y/N)").upper()
+    print(
+        f"Thank you for playing Battleship, {player_name}, till another time!")
