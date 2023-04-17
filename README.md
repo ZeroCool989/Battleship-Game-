@@ -39,3 +39,20 @@ The game is implemented in Python and contains the following components:
 * I also tested the app once the final product was deployed.
 ## Code Validation
 * The code was checked using CI Python Linter online checker.
+
+# Deployment
+The project was deployed to GitHub Pages using the following steps, I used Gitpod as a development environment where I commited all changes to git version control system. I used the push command in Gitpod to save changes into GitHub:
+
+1. Log in to GitHub and locate the GitHub Repository.
+2. At the top of the Repository, click on the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch" and click on save.
+5. The page will automatically refresh.
+6. The now published site link shows at the top of the page.
+
+The project was then deployed to Heroku using the following steps:
+
+1. Log in to Heroku and add a new app.
+2. Link the project from GitHub to Heroku.
+4. Add the Python and NodeJS buildpacks.
+5. Manually deploy the project (I used the manual deploy option in order to control what version was deployed to the live environment).
