@@ -1,9 +1,8 @@
 import random
 
-# Build 8x8 game board
-board = []
-for x in range(8):
-    board.append(["O" * 8])
+def create_board():
+    """Create an 8x8 game board."""
+    return [["O"] * 8 for _ in range(8)]
 
 # Display board
 
