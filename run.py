@@ -4,25 +4,20 @@ def create_board():
     """Create an 8x8 game board."""
     return [["O"] * 8 for _ in range(8)]
 
-
-
-
 def print_board(board):
-    # Print the game board
+    """Print the game board."""
     for row in board:
         print(" ".join(row))
 
-
-
 def place_ship(board):
- #Place a ship randomly on the board.
+    """Place a ship randomly on the board."""
     ship_row = random.randint(0, 7)
     ship_col = random.randint(0, 7)
-    board[ship_row][ship_col] = "*"
-    return (ship_row, ship_col)
+    board[ship_row][ship_col] = "*"  # Use '*' for ship, hidden from player
+    return ship_row, ship_col
 
 def get_user_input(prompt):
-    #Get user input and handle invalid/empty input.
+    """Get user input and handle invalid/empty input."""
     while True:
         try:
             value = int(input(prompt))
@@ -33,9 +28,8 @@ def get_user_input(prompt):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
-
 def main():
-    #Main function for the game.
+    """Main function for the game."""
     player_name = input("What is your name, player? ")
     print(f"\nHello {player_name}! Let's play Battleship!")
     print("You have 5 turns to sink the Battleship!")
@@ -65,8 +59,11 @@ def main():
             print(f"Sorry {player_name}, you didn't find the battleship.")
             print(f"The Battleship was at row {ship_row}, column {ship_col}.")
 
-    if input("Do you want to play again? (Y/N): ").upper() == "Y":
+    play_again = input("Do you want to play again? (Y/N): ").upper()
+    if play_again == "Y":
         main()
+    else:
+        print(f"Thank you for playing Battleship, {player_name}. Goodbye!")
 
 if __name__ == "__main__":
     main()
