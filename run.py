@@ -34,31 +34,26 @@ def get_user_input(prompt):
             print("Invalid input. Please enter a number.")
 
 
-# Game Functionality
-play_again = "Y"
-while play_again == "Y":
+def main():
+    #Main function for the game.
+    player_name = input("What is your name, player? ")
     print(f"\nHello {player_name}! Let's play Battleship!")
-    print("You have 5 turns, to sink the Battleship!")
-    print("I wish you good fortune in the upcoming battle, and now it begins!")
-    board = []
-    for x in range(8):
-        board.append(["O"] * 8)
-    print_board(board)
+    print("You have 5 turns to sink the Battleship!")
 
+    board = create_board()
     ship_row, ship_col = place_ship(board)
+    print_board([["O"] * 8 for _ in range(8)])  # Hide ship location from player
 
     for turn in range(5):
-        print(f"\nTurn {turn + 1}")
-        guess_row = int(input("Guess Row (you can choose between 0 and 7): "))
-        guess_col = int(input("Guess Col (you can choose between 0 and 7): "))
+        print(f"\nTurn {turn + 1} of 5")
+        guess_row = get_user_input("Guess Row (0 to 7): ")
+        guess_col = get_user_input("Guess Col (0 to 7): ")
 
         if guess_row == ship_row and guess_col == ship_col:
-            print(f"\nCongratulations {player_name}! You sank my battleship! ")
+            print(f"\nCongratulations {player_name}! You sank my battleship!")
             break
         else:
-            if guess_row not in range(8) or guess_col not in range(8):
-                print("Oops, that's not even in the ocean.")
-            elif board[guess_row][guess_col] == "X":
+            if board[guess_row][guess_col] == "X":
                 print("You guessed that one already.")
             else:
                 print("You missed my battleship!")
@@ -67,10 +62,11 @@ while play_again == "Y":
 
         if turn == 4:
             print("\nGame Over")
-            print(f"Sorry {player_name}, you lost!.")
-            print(f"Battleship was at row {ship_row} and column {ship_col}.")
+            print(f"Sorry {player_name}, you didn't find the battleship.")
+            print(f"The Battleship was at row {ship_row}, column {ship_col}.")
 
-    # Ask the player for another or ending the game
-    play_again = input("Do you want to play again? (Y/N)").upper()
-    print(
-        f"Thank you for playing Battleship, {player_name}, till another time!")
+    if input("Do you want to play again? (Y/N): ").upper() == "Y":
+        main()
+
+if __name__ == "__main__":
+    main()
