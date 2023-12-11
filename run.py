@@ -4,25 +4,35 @@ def create_board():
     """Create an 8x8 game board."""
     return [["O"] * 8 for _ in range(8)]
 
-# Display board
+
 
 
 def print_board(board):
+    # Print the game board
     for row in board:
         print(" ".join(row))
 
-# Defining random position for battleship
 
 
 def place_ship(board):
+ #Place a ship randomly on the board.
     ship_row = random.randint(0, 7)
     ship_col = random.randint(0, 7)
     board[ship_row][ship_col] = "*"
     return (ship_row, ship_col)
 
+def get_user_input(prompt):
+    #Get user input and handle invalid/empty input.
+    while True:
+        try:
+            value = int(input(prompt))
+            if 0 <= value <= 7:
+                return value
+            else:
+                print("Please enter a number between 0 and 7.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
 
-# Get the players name
-player_name = input("What is your name player? ")
 
 # Game Functionality
 play_again = "Y"
