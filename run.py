@@ -1,13 +1,16 @@
 import random
 
+
 def create_board():
     """Create an 8x8 game board."""
     return [["O"] * 8 for _ in range(8)]
+
 
 def print_board(board):
     """Print the game board."""
     for row in board:
         print(" ".join(row))
+
 
 def place_ship(board):
     """Place a ship randomly on the board."""
@@ -15,6 +18,7 @@ def place_ship(board):
     ship_col = random.randint(0, 7)
     board[ship_row][ship_col] = "*"  # Use '*' for ship, hidden from player
     return ship_row, ship_col
+
 
 def get_user_input(prompt):
     """Get user input and handle invalid/empty input."""
@@ -28,6 +32,7 @@ def get_user_input(prompt):
         except ValueError:
             print("Invalid input. Please enter a number.")
 
+
 def main():
     """Main function for the game."""
     player_name = input("What is your name, player? ")
@@ -36,7 +41,8 @@ def main():
 
     board = create_board()
     ship_row, ship_col = place_ship(board)
-    print_board([["O"] * 8 for _ in range(8)])  # Hide ship location from player
+    print_board([["O"] * 8 for _ in range(8)])
+    # Hide ship location from player
 
     for turn in range(5):
         print(f"\nTurn {turn + 1} of 5")
@@ -64,6 +70,7 @@ def main():
         main()
     else:
         print(f"Thank you for playing Battleship, {player_name}. Goodbye!")
+
 
 if __name__ == "__main__":
     main()
