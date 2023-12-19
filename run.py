@@ -1,22 +1,26 @@
 import random
 import json
 
+
 def create_board():
     """Create an 8x8 game board."""
     return [["O"] * 8 for _ in range(8)]
+
 
 def print_board(board):
     """Print the game board."""
     for row in board:
         print(" ".join(row))
 
+
 def place_ship(board):
     """Place a ship randomly on the board."""
     ship_row = random.randint(0, 7)
     ship_col = random.randint(0, 7)
     # Use '*' for ship, hidden from player
-    board[ship_row][ship_col] = "*"  
+    board[ship_row][ship_col] = "*"
     return ship_row, ship_col
+
 
 def get_user_input(prompt):
     """Get user input and handle invalid/empty input."""
@@ -29,6 +33,7 @@ def get_user_input(prompt):
                 print("Please enter a number between 0 and 7.")
         except ValueError:
             print("Invalid input. Please enter a number.")
+
 
 def save_score(name, score):
     """Save the player's score to a JSON file."""
@@ -43,6 +48,7 @@ def save_score(name, score):
         with open('leaderboard.json', 'w') as file:
             json.dump([{'name': name, 'score': score}], file, indent=4)
 
+
 def display_leaderboard():
     """Display the top 5 scores from the leaderboard."""
     try:
@@ -54,6 +60,7 @@ def display_leaderboard():
     except FileNotFoundError:
         print("No scores recorded yet.")
 
+
 def main():
     """Main function for the game."""
     player_name = input("What is your name, player? ")
@@ -62,7 +69,8 @@ def main():
 
     board = create_board()
     ship_row, ship_col = place_ship(board)
-    print_board([["O"] * 8 for _ in range(8)])  # Hide ship location from player
+    print_board([["O"] * 8 for _ in range(8)])
+    # Hide ship location from player
 
     score = 0
     for turn in range(5):
@@ -95,6 +103,7 @@ def main():
         main()
     else:
         print(f"Thank you for playing Battleship, {player_name}. Goodbye!")
+
 
 if __name__ == "__main__":
     main()
